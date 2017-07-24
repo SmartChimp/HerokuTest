@@ -1,0 +1,16 @@
+<div class="left-panel">
+    <% if(@spaces == nil || @spaces.length == 0) %>
+        <h4>Add your first space to earn in dollars.</h4>
+        <%else %>
+            <div class="list-as-row">
+                <%= render partial: "listed_space", collection: @spaces, as: :space %>
+            </div>
+            <%end%>
+</div>
+<div class="right-panel">
+    
+</div>
+<i id="add-space-icon" class="glyphicon glyphicon-plus add-space-icon"></i>
+<script>
+initListingPage();
+</script>
